@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+    <fullConfig>true</fullConfig>
+    <deviceProtocol>SCCP</deviceProtocol>
+    
+    <!-- Make sure that you are supplying the right firmware on the server, or remark this entry out. -->
+    <!-- <loadInformation>SCCP70.9-0-2SR1S</loadInformation> -->
+    <versionStamp>1460386457-2ae84ad0-d6fc-4305-9f49-5eda6d2dec20</versionStamp>
+    
+    <sshUserId>cisco</sshUserId>
+    <sshPassword>cisco</sshPassword>
+    
+    <!-- 0=IPv4, 1=IPv6, 2=Both -->
+    <ipAddressMode>0</ipAddressMode>
+    <allowAutoConfig>true</allowAutoConfig>
+    <ipPreferenceModeControl>0</ipPreferenceModeControl>
+    
+    <!-- <tzdata>
+        <tzolsonversion>2015a</tzolsonversion>
+        <tzupdater>tzupdater.jar</tzupdater>
+    </tzdata> -->
+    
+    <devicePool>
+        <revertPriority>0</revertPriority>
+        <dateTimeSetting>
+            <dateTemplate>D.M.YY</dateTemplate>
+        </dateTimeSetting>
+        <callManagerGroup>
+            <members>
+                <member priority="0">
+                    <callManager>
+                                                <name>asterisk1</name>
+                                                <description>primairy asterisk server</description>
+                                                <ports>
+                                                        <ethernetPhonePort>2000</ethernetPhonePort>
+                                                        <sipPort>5060</sipPort>
+                                                        <securedSipPort>5061</securedSipPort>
+                                                        <mgcpPorts>
+                                                                <listen>2427</listen>
+                                                                <keepAlive>2428</keepAlive>
+                                                        </mgcpPorts>
+                                                </ports>
+                                                <processNodeName>10.112.112.11</processNodeName>
+                                       </callManager>
+                </member>
+            </members>
+        </callManagerGroup>
+        <srstInfo>
+            <srstOption>Disable</srstOption>
+            <ipAddr1 />
+            <port1>2000</port1>
+            <ipAddr2 />
+            <port2>2000</port2>
+            <ipAddr3 />
+            <port3>2000</port3>
+            <isSecure>false</isSecure>
+        </srstInfo>
+        <connectionMonitorDuration>120</connectionMonitorDuration>
+    </devicePool>
+    
+    <MissedCallLoggingOption>11111111</MissedCallLoggingOption>
+    <commonProfile>
+        <phonePassword>cisco</phonePassword>
+        <backgroundImageAccess>true</backgroundImageAccess>
+        <callLogBlfEnabled>3</callLogBlfEnabled>
+    </commonProfile>
+    
+    <vendorConfig>
+        <disableSpeaker>false</disableSpeaker>
+        <disableSpeakerAndHeadset>false</disableSpeakerAndHeadset>
+        <useEnblocDialing>1</useEnblocDialing>
+        <enableMuteFeature>true</enableMuteFeature>
+        <enableLldpSwPort>0</enableLldpSwPort>
+        <enableLldpPcPort>0</enableLldpPcPort>
+        <spanToPCPort>0</spanToPCPort>
+        <!-- Enable (0) HTTP access -->
+        <webAccess>0</webAccess>
+        <!-- Disable (1) SSH access -->
+        <sshAccess>1</sshAccess>
+        <loggingDisplay>0</loggingDisplay>
+        <forwardingDelay>1</forwardingDelay>
+        <!-- Disable (1) PC port -->
+        <pcPort>1</pcPort>
+        <garp>1</garp>
+        <voiceVlanAccess>0</voiceVlanAccess>
+        <autoSelectLineEnable>1</autoSelectLineEnable>
+        <recordingTone>0</recordingTone>
+        <recordingToneLocalVolume>100</recordingToneLocalVolume>
+        <recordingToneRemoteVolume>50</recordingToneRemoteVolume>
+        <recordingToneDuration />
+        <moreKeyReversionTimer>5</moreKeyReversionTimer>
+        <autoCallSelect>1</autoCallSelect>
+        <g722CodecSupport>2</g722CodecSupport>
+        <headsetWidebandUIControl>0</headsetWidebandUIControl>
+        <headsetWidebandEnable>0</headsetWidebandEnable>
+        <lldpAssetId />
+        <powerPriority>0</powerPriority>
+        <ehookEnable>0</ehookEnable>
+        <ipv6LogServer />
+        <minimumRingVolume>0</minimumRingVolume>
+        <sideToneLevel>0</sideToneLevel>
+        <sendGain>0</sendGain>
+        <handsetHeadsetMonitor>1</handsetHeadsetMonitor>
+        <headsetRecording>0</headsetRecording>
+        <!-- Energy save settings -->
+        <displayOnTime></displayOnTime>
+        <displayOnDuration></displayOnDuration>
+        <displayIdleTimeout></displayIdleTimeout>
+        <enablePowerSavePlus />
+        <allowEnergyWiseOverrides>false</allowEnergyWiseOverrides>
+        <energyWiseDomain />
+        <energyWiseSecret />
+        <!-- Phone on/off times -->
+        <phoneOnTime />
+        <phoneOffTime />
+        <!-- Ringtone alert before poweroff -->
+        <enableAudibleAlert>false</enableAudibleAlert>
+        <daysDisplayNotActive></daysDisplayNotActive>
+        <displayOnWhenIncomingCall>1</displayOnWhenIncomingCall>
+        <!--
+        <userDefinedVPNProfile>false</userDefinedVPNProfile>
+        <enableCiscoUcmAppClient>false</enableCiscoUcmAppClient>
+        <presenceServerType>1</presenceServerType>
+        <instantMessaging/>
+        <desktopClient>
+            <extendAndConnectCapability>0</extendAndConnectCapability>
+            <displayContactPhotos>0</displayContactPhotos>
+            <numberLookupsOnDirectory>0</numberLookupsOnDirectory>
+        </desktopClient>
+        <appInstallFromUnknownSrc>1</appInstallFromUnknownSrc>
+        -->
+    </vendorConfig>
+    
+    <!-- Only if you want to change the display language -->
+    <!-- <userLocale>
+        <name>german_germany</name>
+        <uid>9</uid>
+        <langCode>de_de</langCode>
+        <version>1.0</version>
+        <winCharSet />
+    </userLocale>
+    
+    <networkLocale>german_germany</networkLocale>
+    <networkLocaleInfo>
+        <name>german_germany</name>
+        <version>1.0.0.0-1</version>
+    </networkLocaleInfo> -->
+    
+    <!-- Cipher for TLS (1=Insecure, 2=TLS using NULL, 3=TLS using AES) -->
+    <deviceSecurityMode>1</deviceSecurityMode>
+    <authenticationURL></authenticationURL>
+    <directoryURL></directoryURL>
+    <informationURL />
+    <messagesURL />
+    <servicesURL></servicesURL>
+    <idleURL></idleURL>
+    <idleTimeout>0</idleTimeout>
+    <proxyServerURL />
+    <secureAuthenticationURL />
+    <secureDirectoryURL />
+    <secureIdleURL />
+    <secureInformationURL />
+    <secureMessagesURL />
+    <secureServicesURL />
+    <dscpForSCCPPhoneConfig>96</dscpForSCCPPhoneConfig>
+    <dscpForSCCPPhoneServices>0</dscpForSCCPPhoneServices>
+    <dscpForCm2Dvce>96</dscpForCm2Dvce>
+    <!-- 1=TCP, 2=UDP, 3=TLS -->
+    <transportLayerProtocol>1</transportLayerProtocol>
+    <!-- 0=Disable, 1=Beep, 5=Flash -->
+    <dndCallAlert>5</dndCallAlert>
+    <phonePersonalization>1</phonePersonalization>
+    <rollover>0</rollover>
+    <singleButtonBarge>0</singleButtonBarge>
+    <joinAcrossLines>0</joinAcrossLines>
+    <autoCallPickupEnable>false</autoCallPickupEnable>
+    <blfAudibleAlertSettingOfIdleStation>0</blfAudibleAlertSettingOfIdleStation>
+    <blfAudibleAlertSettingOfBusyStation>0</blfAudibleAlertSettingOfBusyStation>
+    <capfAuthMode>0</capfAuthMode>
+    <capfList>
+        <capf>
+            <phonePort>3804</phonePort>
+            <processNodeName />
+        </capf>
+    </capfList>
+    
+    <certHash />
+    <encrConfig>false</encrConfig>
+    <advertiseG722Codec>1</advertiseG722Codec>
+    <userId />
+</device>

@@ -1,0 +1,25 @@
+<Default> 
+ <callManagerGroup> 
+     <members> 
+        <member priority="0"> 
+           <callManager> 
+              <ports> 
+                 <ethernetPhonePort>2000</ethernetPhonePort> 
+                 <mgcpPorts> 
+                    <listen>2427</listen> 
+                    <keepAlive>2428</keepAlive> 
+                 </mgcpPorts> 
+              </ports> 
+              <processNodeName></processNodeName> 
+           </callManager> 
+        </member> 
+     </members> 
+  </callManagerGroup> 
+ <loadInformation6>SIP70.8-5-4S</loadInformation6>
+ <authenticationURL></authenticationURL> 
+ <directoryURL></directoryURL> 
+ <idleURL></idleURL> 
+ <informationURL></informationURL> 
+ <messagesURL></messagesURL> 
+ <servicesURL></servicesURL> 
+ </Default>
