@@ -10,7 +10,7 @@
 		<timeZone>E. Europe Standard/Daylight Time</timeZone>
 		<ntps>
 		 <ntp> 
-		  <name>192.168.2.228</name>
+		  <name>ntpserver</name>
 		  <ntpMode>unicast</ntpMode>
 		 </ntp>
 		</ntps>
@@ -25,7 +25,7 @@
 				<sipPort>5060</sipPort>
 				<securedSipPort>5061</securedSipPort>
                </ports>
-                 <processNodeName>10.112.112.11</processNodeName>
+                 <processNodeName>asterisk IP</processNodeName>
               </callManager>
            </member>
         </members>
@@ -112,14 +112,14 @@
            <name>99</name>
            <displayName>99</displayName>
            <contact>99</contact>
-           <proxy>10.112.112.11</proxy>
+           <proxy>asterisk server</proxy>
            <port>5060</port>
              <autoAnswer>
                 <autoAnswerEnabled>2</autoAnswerEnabled>
              </autoAnswer>
            <callWaiting>3</callWaiting>
-           <authName>99</authName>
-           <authPassword>99</authPassword>
+           <authName>USER</authName>
+           <authPassword>PASS</authPassword>
            <sharedLine>false</sharedLine>
            <messageWaitingLampPolicy>1</messageWaitingLampPolicy>
            <messagesNumber></messagesNumber>
@@ -159,9 +159,9 @@
      <pcPort>0</pcPort>
      <garp>0</garp>
      <autoSelectLineEnable>0</autoSelectLineEnable>
-     <!--<authenticationURL>http://10.112.112.11/cisco/services/authentication.php</authenticationURL>-->
-     <!--<directoryURL>http://10.112.112.11/phonebook.xml</directoryURL>-->
-     <!--<idleURL>http://10.112.112.11/xmlservices/index.php</idleURL>-->
+     <!--<authenticationURL>http://ASTERISKIP/cisco/services/authentication.php</authenticationURL>-->
+     <!--<directoryURL>http://ASTERISKIP/phonebook.xml</directoryURL>-->
+     <!--<idleURL>http://ASTERISKIP/xmlservices/index.php</idleURL>-->
      <informationURL></informationURL>
      <displayOnWhenIncomingCall>1</displayOnWhenIncomingCall>
 	 <g722CodecSupport>2</g722CodecSupport>
