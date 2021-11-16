@@ -10,7 +10,7 @@
 		    <timeZone>E. Europe Standard/Daylight Time</timeZone>
             <ntps> 
                 <ntp>
-                    <name>192.168.2.228</name> 
+                    <name>ntpserver</name> 
                     <ntpMode>Unicast</ntpMode> 
                 </ntp>
             </ntps>
@@ -21,11 +21,11 @@
                 <member priority="0">
                     <callManager>
                         <ports>
-                            <ethernetPhonePort>2000</ethernetPhonePort>
+                            <ethernetPhonePort>2000</ethernetPhonePort>ng
                             <sipPort>5060</sipPort>
                             <securedSipPort>5061</securedSipPort>
                         </ports>
-                        <processNodeName>10.112.112.11</processNodeName>
+                        <processNodeName>asteriskIP</processNodeName>
                     </callManager>
                 </member>
             </members>
@@ -156,14 +156,14 @@
                 <name>98</name>
                 <displayName>98</displayName>
                 <contact>98</contact>
-                <proxy>10.112.112.11</proxy>
+                <proxy>ASTERISK IP</proxy>
                 <port>5060</port>
                 <autoAnswer>
                     <autoAnswerEnabled>2</autoAnswerEnabled>
                 </autoAnswer>
                 <callWaiting>3</callWaiting>
-                <authName>98</authName>
-                <authPassword>98</authPassword>
+                <authName>USER</authName>
+                <authPassword>PASSWORD</authPassword>
                 <sharedLine>false</sharedLine>
                 <messageWaitingLampPolicy>1</messageWaitingLampPolicy>
                 <messagesNumber>*97</messagesNumber>
